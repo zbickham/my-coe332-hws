@@ -76,8 +76,8 @@ def main():
     with open('turbidity_data.json', 'r') as f:
         turbidity_data = json.load(f)
     
-    recent = create_new_list(turbidity_data)
-    average_turbidity = average_values(most_recent)
+    recent = create_list(turbidity_data)
+    average_turbidity = average_values(recent)
 
     print('Average turbidity based on most recent five measurements = ' + str(average_turbidity) + ' NTU')
 
