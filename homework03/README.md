@@ -18,4 +18,12 @@ This Python script calculates the turbidity of the water from the water quality 
 This Python script runs five different unit tests. These tests check the validity of the functions defined in the analyze_water.py script.
 
 ## Instructions to Run Code
-After downloading the JSON file using the directions above, enter the command "python3 analyze_water.py". This will tell the user if the water is safe to use based on the water turbidity. Next, enter the command "python3 test_analyze_water.py". This script will run unit tests on the functions created in "analyze_water.py" to ensure that everything is valid.
+After downloading the JSON file using the directions above, enter the command "python3 analyze_water.py". This will tell the user if the water is safe to use based on the water turbidity. Example output is shown here:
+
+```
+Average turbidity based on most recent five measurements = 1.166279 NTU
+WARNING: Turbidity is above threshold for safe use
+Minimum time required to return below a safe threshold = 7.61374881476668 hours
+```
+
+Next, enter the command "python3 test_analyze_water.py". This script will run unit tests on the functions created in "analyze_water.py" to ensure that everything is valid.
