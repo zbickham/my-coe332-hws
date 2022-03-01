@@ -3,6 +3,7 @@ import json
 from typing import List
 import logging
 import socket
+import sys
 
 format_str=f'[%(asctime)s {socket.gethostname()}] %(filename)s:%(funcName)s:%(lineno)s - %(levelname)s: %(message)s'
 logging.basicConfig(level=logging.WARNING, format=format_str)
@@ -78,20 +79,40 @@ def count_classes(a_list_of_dicts: List[dict], a_key_string: str) -> dict:
 def main():
     logging.debug('entering main loop')
 
-    with open('Meteorite_Landings.json', 'r') as f:
+    with open(sys.argv[1], 'r') as f:
         ml_data = json.load(f)
 
     logging.debug(f'the type of ml_data is {type(ml_data)}')
 
-    print(compute_average_mass(ml_data['meteorite_landings'], 'mass (g)'))
-
+    print("Summary data following meteorite analysis:")
+    print("\nAverage mass of", len(ml_data['meteorite_landings']), "meteor(s):")
+    print(compute_average_mass(ml_data['meteorite_landings'], 'mass (g)'), "grams")
+    
+    countNE=0
+    countSE=0
+    countNW=0
+    countSW=0
     for row in ml_data['meteorite_landings']:
-        print(check_hemisphere(float(row['reclat']), float(row['reclong'])))
+        if (check_hemisphere(float(row['reclat']), float(row['reclong']))==('Northern & Eastern')):
+            countNE+=1
+        elif (check_hemisphere(float(row['reclat']), float(row['reclong']))==('Northern & Western')):
+            countNW+=1
+        elif (check_hemisphere(float(row['reclat']), float(row['reclong']))==('Southern & Eastern')):
+            countSE+=1
+        elif (check_hemisphere(float(row['reclat']), float(row['reclong']))==('Southern & Western')):
+            countSW+=1
 
-    print(count_classes(ml_data['meteorite_landings'], 'recclass'))
+    print("\nHemisphere summary data:")
+    print("There were ", countNE, " meteors found in the Northern & Eastern quadrant")
+    print("There were ", countNW, " meteors found in the Northern & Western quadrant")
+    print("There were ", countSE, " meteors found in the Southern & Eastern quadrant")
+    print("There were ", countSW, " meteors found in the Southern & Western quadrant")
+
+    print("\nClass summary data:")
+    class_dict = count_classes(ml_data['meteorite_landings'], 'recclass')
+    for key, value in class_dict.items():
+        print("The ", key, " class was found ", value, " times")
 
 
 if __name__ == '__main__':
     main()
-
-
