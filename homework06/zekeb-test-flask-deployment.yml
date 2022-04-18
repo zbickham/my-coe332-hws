@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zekeb-test-flask
+  labels:
+    app: zekeb-test-flask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: zekeb-test-flask
+  template:
+    metadata:
+      labels:
+        app: zekeb-test-flask
+    spec:
+      containers:
+        - name: zekeb-test-flask
+          imagePullPolicy: Always
+          image: zekeb/hw5:latest
+          env:
+          - name: FLASK_APP
+            value: "app.py"
+          ports:
+          - name: http
+            containerPort: 5000
