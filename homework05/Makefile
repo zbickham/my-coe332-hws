@@ -1,4 +1,4 @@
-NAME ?= zekeb
+NAME ?= zbickham
 
 all: build run push
 
