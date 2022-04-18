@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zekeb-test-deployment
+  labels:
+    app: zekeb-test-redis
+    username: zekeb
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zekeb-test-redis
+  template:
+    metadata:
+      labels:
+        app: zekeb-test-redis
+        username: zekeb
+        env: test
+    spec:
+      containers:
+        - name: zekeb-test
+          imagePullPolicy: Always
+          image: redis:6
+          volumeMounts:
+          - name: zekeb-test-data
+            mountPath: "/data"
+      volumes:
+      - name: zekeb-test-data
+        persistentVolumeClaim:
+          claimName: zekeb-test-data
