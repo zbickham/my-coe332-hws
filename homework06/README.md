@@ -26,6 +26,11 @@ This is a file that creates a service for my flask API.
 $ ssh <username>@coe332-k8s.tacc.cloud
 ```
 
+- If needed, download the meteorite landings dataset to your directory using the following command:
+```bash
+$ wget https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json
+```
+
 - Use the following command with each individual YAML file name to start all the pods:
 ```bash
 $ kubectl apply -f <filename>.yml
