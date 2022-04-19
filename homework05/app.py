@@ -19,7 +19,7 @@ def load_data():
     """
     global ml_data
 
-    with open('ML_Data_sample.json', 'r') as f:
+    with open('ML_Data_Sample.json', 'r') as f:
                ml_data = json.load(f)
     
     global rd
