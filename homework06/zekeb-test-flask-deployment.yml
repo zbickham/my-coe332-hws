@@ -18,7 +18,7 @@ spec:
       containers:
         - name: zekeb-test-flask
           imagePullPolicy: Always
-          image: zekeb/hw5:latest
+          image: zbickham/hw6:latest
           env:
           - name: FLASK_APP
             value: "app.py"
