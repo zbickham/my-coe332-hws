@@ -23,7 +23,7 @@ This is a file that creates a service for my flask API.
 ## Instructions to Run Code
 - First, you will need to ssh into a k8 cluster and then pull this git repo into the shell and enter the /homework06 directory:
 ```bash
-$ ssh <username>@coe332-k8s.tacc.utexas.edu
+$ ssh <username>@coe332-k8s.tacc.cloud
 ```
 
 - Use the following command with each individual YAML file name to start all the pods:
