@@ -34,7 +34,7 @@ def load_redis():
     Returns:
         A JSON list of the loaded information.
     """   
-    rd = redis.Redis(host='172.17.0.40', port = 6379, db =0)
+    rd = redis.Redis(host='10.97.36.98', port = 6379, db =0)
     list_of_ml = []
     for x in ml_data['meteorite_landings']:
         list_of_ml.append(x)
