@@ -1,4 +1,4 @@
-# homework01
+# Python Test Scripts
 
 This is the homework 1 directory containing Python scripts for homework 1.
 
