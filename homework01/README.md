@@ -12,4 +12,4 @@ This python script creates a list of 10 integers and determines whether each int
 This python script prints out all prime numbers from 3 to 100 (inclusive).
 
 ## Instructions to Run Code
-Enter the command "python3 even-odd.py" or "python3 primes.py" to run the code.
+Enter the command "python3 even-odd.py" or "python3 primes.py" in the terminal to run the code.
