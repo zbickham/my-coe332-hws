@@ -1,7 +1,12 @@
 # Python Test Scripts
+This folder contains two Python scripts (`even-odd.py` and `primes.py`).
 
-This is the homework 1 directory containing Python scripts for homework 1.
+## Project Objective
+The purpose of this project was to learn how to use Git and GitHub. The task was to create a new Git repository and populate it with several files.
 
-The script even-odd.py creates a list of 10 integers and determines whether each integer is even or odd.
+## Description of Files
+### even-odd.py
+This python script creates a list of 10 integers and determines whether each integer is even or odd.
 
-The script primes.py prints out all prime numbers from 3 to 100 (inclusive).
+### primes.py
+This python script prints out all prime numbers from 3 to 100 (inclusive).
