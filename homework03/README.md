@@ -1,4 +1,4 @@
-# COE 332 Homework 3: Analyzing Water Quality Data
+# Analyzing Water Quality Data
 
 ## Project Objective
 This folder contains two Python scripts: analyze_water.py and test_analyze_water.py
