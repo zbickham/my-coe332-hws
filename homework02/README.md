@@ -1,4 +1,4 @@
-# COE 332 Homework 2: An Investigation of Five Meteorite Landing Sites
+# An Investigation of Five Meteorite Landing Sites
 
 ## Project Objective
 This folder contains two Python scripts: calculate_trip.py and generate_sites.py
